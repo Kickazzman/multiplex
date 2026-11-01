@@ -1,0 +1,1413 @@
+{
+  "derived_from": "use-map-full-content.md",
+  "derived_note": "Derived index only. The markdown map is the single source of truth; this JSON is regenerated when the map changes. No rule, seat, or number here comes from outside the map.",
+  "meta": {
+    "avoid_entries_cited_in_avoid_lists": 42,
+    "avoid_entries_total": 83,
+    "derivation_rule": "Single source of truth stays the markdown map; this JSON is a derived index, regenerated when the map changes.",
+    "guard": "Standing guard (map header, 2026-10-30): no unilateral exclusions; coverage counts recomputed by use-map-regen-check.py on every edit and must PASS; markdown map is source of truth.",
+    "map_classes": {
+      "AVOID": 83,
+      "BUILD NEXT": 61,
+      "NO DIRECT USE": 14,
+      "REFERENCE": 141,
+      "USE NOW": 126
+    },
+    "map_total_entries": 425,
+    "no_direct_use_excluded": {
+      "count": 14,
+      "reason": "no genuine use"
+    },
+    "operational_entries_cited": 94,
+    "reference_entries_cited": 3,
+    "reference_entries_total": 135,
+    "regen_check": "use-map-regen-check.py must PASS on every map edit; validates entry counts, header splits, and index citations.",
+    "unique_entries_cited_total": 135,
+    "unresolved_audit_2026_10_30": "All 7 unresolved fields re-audited against the full map: confirmed gaps, no missed grounding. Decision list in mode-switch-trial-report.md.",
+    "seven_decisions_2026_10_30": "All 7 unresolved mode fields resolved 2026-10-30 (see seven-decisions-report.md): shape seat = deterministic solver lane (build pending); signal-decoding = quicklook interim offline-only, live rig-blocked; synthesis seat = quicklook :8203; routing = rule layer confirmed, no model seat; math-verification escalation = derived-design B-X05; synthesis escalation = derived-design B-X06; math-verification seat = mathwhiz proposer + oracle verdicts. No unresolved mode fields remain; derived-design rules are labeled as proposals, not measured rules.",
+    "citation_count_method": "unique 'sources' citations across modes; operational = U- + B- + E- unique; reference = R- unique; avoid-list count = unique IDs cited inside mode 'avoid' lists.",
+    "seven_decisions_approval_2026_10_30": {
+      "approved": [
+        "X03",
+        "X07-proposer",
+        "X05",
+        "X06"
+      ],
+      "condition": "stays while better; replaced when evidence shows a better option",
+      "status": "approved, not permanent"
+    },
+    "map_audit_2026_10_30": "Staleness+completeness audit 2026-10-30 (see map-audit-report.md): R-S03 baseline pair corrected (two dated figures unpaired); 48 AU entries added from daily notes, goal files, top-level summaries, and a mrfloppy read-only survey; modes UNCHANGED; no approved pick changed; breeding listed separately awaiting perg's boundary call.",
+    "breeding_foldin_2026_10_30": "Breeding research folded into the map 2026-10-30 on perg's order (BR01-BR15: quiet-donor rule, workflow, S1 project + S1 knowledge, shortlist, 3-track plan, hemp/ErdPurt, legal context as stated, monster autoflowers, dossier, RDWC/HPA rig, stock update, pairing pending, acquisition list NOT AUTHORIZED). Modes UNCHANGED; no mode rule touched; mapping only.",
+    "verification_patch_2026_10_30": "Verification patch 2026-10-30 (see verification-reads-report.md + verification-patch-note.md): diet battery verdict + instrument (U-W04/R-W09), cube ratio corrected in place (R-CU01, 49.4%), 72h total settled in place (R-W01, tick 14,458,400), TRM null + ternary REJECT (R-MA03/A-MA01), sparse dirs consolidated (R-AU49). Modes UNCHANGED.",
+    "findings_package_2026_10_31": "Findings package 2026-10-31 (perg-ordered; see decider-build-report.md \u00a711, real-diff-coder-report.md, rederivation-rule-report.md, interface-contract-route-report.md, spectral-test-report.md): map +4 entries (U-J16 test-execution default for real-diff judging; A-J07 lean rule on coder-seat real-diff judging forbidden; R-J01 second-route program closure v1+v2; R-J02 spectral findings on the EIT mesh). Modes UNCHANGED; no mode rule touched; mapping + scope record only."
+  },
+  "modes": {
+    "code-patch-correct": {
+      "avoid": [
+        {
+          "avoid": "Trusting hammer on ANY disagreement subset (0/41 hammer-correct on observed disagreements)",
+          "sources": [
+            "A-J01"
+          ]
+        },
+        {
+          "avoid": "Pooling probe decision-value splits with saved splits (probe replicates saved hammer 71/71; one observation re-measured, not two)",
+          "sources": [
+            "A-J02"
+          ]
+        },
+        {
+          "avoid": "Escalate-everything as a default policy (cost 1.00 trades one 0.01 error source for another at 7x lean cost; floor band fully contains lean's)",
+          "sources": [
+            "A-J03"
+          ]
+        },
+        {
+          "avoid": "Duration-priced escalation from these runners (duration is post-hoc)",
+          "sources": [
+            "A-J04"
+          ]
+        },
+        {
+          "avoid": "Reading a realised 0.0000 as a true rate of 0 (floor band is the honest uncertainty)",
+          "sources": [
+            "A-J05"
+          ]
+        },
+        {
+          "avoid": "Quoting floor bands as exact (both-pass tie-break expected error is 0.5, not 1.0; bands lean high)",
+          "sources": [
+            "A-J06"
+          ]
+        },
+        {
+          "avoid": "Solver-as-oracle: a solver fed a formalisation produced by the same LLM whose output it checks is theatre",
+          "sources": [
+            "A-F04"
+          ]
+        }
+      ],
+      "cost_posture": {
+        "calculator_floor": "P(calculator fails) = 1/100 = 0.010, Wilson (0.0018, 0.0545); reachability 0.990; no policy using this calculator beats ~1% error on this item class",
+        "default": "lean",
+        "floor_sources": [
+          "U-J04"
+        ],
+        "full_sources": [
+          "U-J05"
+        ],
+        "full_vs_lean": "Full costs 22 extra runs/100 (lag) or 19/80 (orig+hard) over lean for zero observed gain; full beats lean in expectation iff future fast-wrong-among-disagreements rate r > 0.01; r unmeasured (0/41, rule-of-three upper approx 0.073); the pick is perg's design call, the rows do not pick one",
+        "lean_costs": "Lag cost 0.28, orig+hard cost 0.25; floor-adjusted error 0.0028 / 0.0025",
+        "lean_sources": [
+          "U-J01"
+        ]
+      },
+      "escalation": {
+        "confident_error_caveat": "Confident fast error is invisible to null/confidence sensors below escalate-all cost: ns2-a23, fast pass @ 1.0, ground truth fail. Below cost 1.00 the ns2 error floor is 0.01, not 0.",
+        "confident_error_sources": [
+          "U-J11"
+        ],
+        "hammer_exclusion": "Hammer confidence never enters the rule in any form: raw, recalibrated, or logprob-gated. Hammer expressed confidence is constant 1.0 on all 129 answered saved rows; accuracy 73/129 = 0.566; mapping 1.0 to 0.566 changes no decision.",
+        "hammer_sources": [
+          "U-J02"
+        ],
+        "merge": "Any decider merge must be a semilattice WITH top = disagree; max-by-confidence alone always answers and hides contention; with top, |B/~| = P(join = top) is a genuine measurement.",
+        "merge_sources": [
+          "U-J06",
+          "B-J01"
+        ],
+        "negative_sources": [
+          "U-J08",
+          "U-J09",
+          "U-J10",
+          "B-J06"
+        ],
+        "negative_triggers": "No lag trigger on the fast+hammer pair (hammer duration median 0.07s; gap medians -9.53s vs -9.74s; tertiles non-monotone). No duration-priced policy from these runners; duration is post-hoc (null rows take two attempts). Every escalation policy must include null fallback; a threshold firing on correct answers is pure cost.",
+        "null_sensor": "Null is a complexity sensor: null rates Tier 1 0/32, Tier 2 3/36, Tier 3 11/32; P(Tier 3|null) = 11/14 = 0.786 vs P(Tier 3|no null) = 21/86 = 0.244. Tier is a prior, not a deterministic trigger; subtlety carries no signal.",
+        "null_sources": [
+          "U-J03"
+        ],
+        "rule": "Escalate to the calculator on fast null OR fast confidence < 0.8; never on hammer confidence, disagreement alone, or any threshold above 0.8.",
+        "rule_sources": [
+          "U-J01"
+        ]
+      },
+      "seats": {
+        "alternate_second_opinion": "huihui Qwen3.8-27B abliterated, serial second-opinion audit (coder proposes, huihui independently checks)",
+        "alternate_sources": [
+          "E-SRV05"
+        ],
+        "oracle": "test-suite calculator, failure floor 1/100",
+        "oracle_sources": [
+          "U-J04",
+          "B-J01"
+        ],
+        "primary": "Qwen3-Coder-30B-A3B abliterated, serial temp server :18010, residents paused, ordered restore after",
+        "primary_sources": [
+          "E-SRV04"
+        ],
+        "resident_fallback": "magicoder :8202, quick code questions only when a serial window is not warranted; not equal to the serial pair on hard work",
+        "resident_sources": [
+          "E-SRV06"
+        ],
+        "second_opinion_serial": "Coder-Next, serial, second-opinion role only, not a replacement",
+        "second_opinion_sources": [
+          "E-SRV07"
+        ],
+        "serial_rule": "Models do not need to run in parallel; run best-for-purpose models in series, swapping in/out per task; VRAM is the fast lane, ~128GB system RAM is the overflow lane",
+        "serial_sources": [
+          "E-SRV08"
+        ]
+      },
+      "sources": [
+        "U-J01",
+        "U-J02",
+        "U-J03",
+        "U-J04",
+        "U-J05",
+        "U-J06",
+        "U-J08",
+        "U-J09",
+        "U-J10",
+        "U-J11",
+        "U-J15",
+        "U-F04",
+        "E-SRV04",
+        "E-SRV05",
+        "E-SRV06",
+        "E-SRV07",
+        "E-SRV08",
+        "B-J01",
+        "B-J06",
+        "A-J01",
+        "A-J02",
+        "A-J03",
+        "A-J04",
+        "A-J05",
+        "A-J06",
+        "A-F04"
+      ],
+      "tests": [
+        {
+          "sources": [
+            "U-J04"
+          ],
+          "test": "Test-suite calculator as oracle, with the 1/100 floor and a tie-break / further-escalation rule for both-pass ambiguity"
+        },
+        {
+          "sources": [
+            "E-SRV07"
+          ],
+          "test": "Verifier feedback must quote the exact failing line text; evidence alone stalls"
+        },
+        {
+          "sources": [
+            "U-J15"
+          ],
+          "test": "contract_ok recomputed as (decision is not None); retry-ok flag discipline on every future runner"
+        },
+        {
+          "sources": [
+            "U-F04"
+          ],
+          "test": "Independent verifier per claim type: SMT for arithmetic constraints, ASP for defeasible interpretation, Bayesian updating for graded belief; verifier independent of proposer"
+        }
+      ]
+    },
+    "code-which-better": {
+      "avoid": [
+        {
+          "avoid": "Trusting hammer on ANY disagreement subset",
+          "sources": [
+            "A-J01"
+          ]
+        },
+        {
+          "avoid": "Pooling probe decision-value splits with saved splits",
+          "sources": [
+            "A-J02"
+          ]
+        },
+        {
+          "avoid": "Escalate-everything as a default policy",
+          "sources": [
+            "A-J03"
+          ]
+        },
+        {
+          "avoid": "Reading a realised 0.0000 as a true rate of 0",
+          "sources": [
+            "A-J05"
+          ]
+        },
+        {
+          "avoid": "Solver-as-oracle: verifier fed a formalisation produced by the same LLM it checks",
+          "sources": [
+            "A-F04"
+          ]
+        }
+      ],
+      "cost_posture": {
+        "default": "lean",
+        "full_sources": [
+          "U-J05"
+        ],
+        "full_vs_lean": "Full costs 22 extra runs/100 (lag) or 19/80 (orig+hard) over lean for zero observed gain; full beats lean iff r > 0.01; r unmeasured",
+        "lean_costs": "Lag cost 0.28, orig+hard cost 0.25; floor-adjusted error 0.0028 / 0.0025",
+        "lean_sources": [
+          "U-J01"
+        ]
+      },
+      "escalation": {
+        "calibrator_rule": "Any trained calibrator fits on FRESH items only; fitting to saved rows fits hammer's temp-0 determinism (71/71 replication), not generalisation.",
+        "calibrator_sources": [
+          "B-J04"
+        ],
+        "hammer_exclusion": "Hammer confidence never enters the rule in any form: raw, recalibrated, or logprob-gated.",
+        "hammer_sources": [
+          "U-J02"
+        ],
+        "merge": "Any decider merge must be a semilattice WITH top = disagree; max-by-confidence alone hides contention.",
+        "merge_sources": [
+          "U-J06",
+          "B-J01"
+        ],
+        "open_measurement": "Fast+hammer run on ns2-like items (where fast errs when answering, WITH hammer rows) is the missing measurement that unblocks the insurance decision; until it exists, r = 0.01 stays unmeasured.",
+        "open_sources": [
+          "B-J02"
+        ],
+        "rule": "Escalate to the calculator on fast null OR fast confidence < 0.8; never on hammer confidence, disagreement alone, or any threshold above 0.8.",
+        "rule_sources": [
+          "U-J01"
+        ]
+      },
+      "seats": {
+        "alternate_second_opinion": "huihui Qwen3.8-27B abliterated, serial second-opinion audit",
+        "alternate_sources": [
+          "E-SRV05"
+        ],
+        "oracle": "test-suite calculator, failure floor 1/100",
+        "oracle_sources": [
+          "U-J04",
+          "B-J01"
+        ],
+        "precondition_sources": [
+          "B-J03",
+          "U-J02"
+        ],
+        "primary": "Qwen3-Coder-30B-A3B abliterated, serial temp server :18010, residents paused, ordered restore after",
+        "primary_sources": [
+          "E-SRV04"
+        ],
+        "resident_fallback": "magicoder :8202, quick code questions only",
+        "resident_sources": [
+          "E-SRV06"
+        ],
+        "second_opinion_precondition": "A genuine second-opinion seat must have varying expressed confidence AND disagreements that include fast-wrong examples; hammer as served is not that seat (constant 1.0, constant pass on (a))",
+        "second_opinion_serial": "Coder-Next, serial, second-opinion role only",
+        "second_opinion_sources": [
+          "E-SRV07"
+        ],
+        "serial_rule": "Models do not need to run in parallel; run best-for-purpose models in series, swapping in/out per task",
+        "serial_sources": [
+          "E-SRV08"
+        ]
+      },
+      "sources": [
+        "U-J01",
+        "U-J02",
+        "U-J04",
+        "U-J05",
+        "U-J06",
+        "U-J14",
+        "U-J15",
+        "E-SRV04",
+        "E-SRV05",
+        "E-SRV06",
+        "E-SRV07",
+        "E-SRV08",
+        "B-J01",
+        "B-J02",
+        "B-J03",
+        "B-J04",
+        "A-J01",
+        "A-J02",
+        "A-J03",
+        "A-J05",
+        "A-F04"
+      ],
+      "tests": [
+        {
+          "sources": [
+            "U-J04"
+          ],
+          "test": "Test-suite calculator as oracle, with the 1/100 floor and a tie-break / further-escalation rule for both-pass ambiguity"
+        },
+        {
+          "sources": [
+            "E-SRV07"
+          ],
+          "test": "Verifier feedback must quote the exact failing line text"
+        },
+        {
+          "sources": [
+            "U-J15"
+          ],
+          "test": "contract_ok recomputed as (decision is not None)"
+        },
+        {
+          "sources": [
+            "U-J14"
+          ],
+          "test": "Decompose disagreement counts by answered-pool before interpreting; never report a disagreement-count change without the both-answered denominator"
+        }
+      ]
+    },
+    "fleet-operation": {
+      "avoid": [
+        {
+          "avoid": "LFM3 adoption: REJECT (safety gate fails on real behaviour, not artifact)",
+          "sources": [
+            "E-SRV12"
+          ]
+        },
+        {
+          "avoid": "Dafny loop as-is: do not rerun (0/20 vs 0/20 baseline; parked, not cleared)",
+          "sources": [
+            "E-SRV13"
+          ]
+        },
+        {
+          "avoid": "Pointer semantics / mechanism claims from pointer-shaped values (heuristic, not proven pointer or address)",
+          "sources": [
+            "E-EMG10"
+          ]
+        },
+        {
+          "avoid": "Frontier API seat as a precondition (conflicts with the standing decision declining the paid frontier lane)",
+          "sources": [
+            "A-D08"
+          ]
+        },
+        {
+          "avoid": "Re-offering quicklook speculative decoding without a changed target or draft",
+          "sources": [
+            "R-S05"
+          ]
+        }
+      ],
+      "cost_posture": {
+        "contention": "All-five-concurrent aggregate approx 245 tok/s, about one mid-size model alone",
+        "contention_sources": [
+          "R-S05"
+        ],
+        "strata_gate": "Gate 7,500 MiB, passed with 1,648 margin (9,148 free); headroom at session-up thin (148 MiB free)",
+        "strata_sources": [
+          "R-S03"
+        ],
+        "swap_cost": "Swap overhead ~2.1 s/window; series inflation median 0.97 (range 0.30-1.32)",
+        "swap_sources": [
+          "R-S04"
+        ]
+      },
+      "escalation": {
+        "rule": "Fleet escalation is a serial swap, not parallel load: pause seats, run the best-for-purpose model, ordered restore. Router lock held only for generation in _guarded on /run, /run_verified, /run_re; /verify and /route unlocked.",
+        "rule_sources": [
+          "E-SRV08",
+          "E-SRV04",
+          "R-S03",
+          "R-S04"
+        ]
+      },
+      "seats": {
+        "batch_runner": "Direct-port seat calls, never through the router; requires router runs_in_flight 0 before the run and every window, else abort; solo phase then series phase grouped by seat, strictly sequential; trap-restore",
+        "batch_runner_sources": [
+          "R-S04"
+        ],
+        "paused": "Shepherd :8206 and verifier :8199 PAUSED on perg's tap; do not silently resume or alter seat configs",
+        "paused_sources": [
+          "R-S04"
+        ],
+        "programming_alternate_serial": "huihui Qwen3.8-27B abliterated, serial second-opinion audit",
+        "programming_alternate_sources": [
+          "E-SRV05"
+        ],
+        "programming_primary_serial": "Qwen3-Coder-30B-A3B abliterated, temp server :18010, residents paused, ordered restore",
+        "programming_primary_sources": [
+          "E-SRV04"
+        ],
+        "programming_second_opinion_serial": "Coder-Next, serial, second-opinion only",
+        "programming_second_opinion_sources": [
+          "E-SRV07"
+        ],
+        "resident_fallback": "magicoder :8202, quick code questions only",
+        "resident_fallback_sources": [
+          "E-SRV06"
+        ],
+        "residents": "Fleet baseline healthy: 8201/8202/8203/8207/8211, API :8198, novelty :8212",
+        "residents_sources": [
+          "R-S04"
+        ],
+        "router_serialization": "Patch only in multiplex_api.py; lock held only for generation in _guarded on /run, /run_verified, /run_re; /verify deliberately unlocked; /route deliberately not locked (loopback /run acquires it; locking /route would deadlock); live proof five concurrent /run calls staggered, all correct",
+        "router_serialization_sources": [
+          "R-S04"
+        ],
+        "serial_rule": "Models do not need to run in parallel; swap best-for-purpose models in series per task; VRAM is the fast lane, ~128GB system RAM is the overflow lane; do not buy hardware to force a parallel fit for current gaps",
+        "serial_sources": [
+          "E-SRV08"
+        ],
+        "strata_sources": [
+          "R-S03"
+        ],
+        "strata_window": "One-shot serial window only: draft + mathwhiz paused, gate 7,500 MiB, session-up 30s, clean restore to exact baseline; strata.service stays DISABLED, never enable as resident; headroom at session-up thin (148 MiB free), proves load + restore, NOT inference headroom under load"
+      },
+      "sources": [
+        "E-SRV01",
+        "E-SRV02",
+        "E-SRV03",
+        "E-SRV04",
+        "E-SRV05",
+        "E-SRV06",
+        "E-SRV07",
+        "E-SRV08",
+        "E-SRV09",
+        "E-SRV12",
+        "E-SRV13",
+        "E-EMG06",
+        "E-EMG10",
+        "E-MTH06",
+        "R-S03",
+        "R-S04",
+        "R-S05",
+        "A-D08"
+      ],
+      "tests": [
+        {
+          "sources": [
+            "E-SRV01"
+          ],
+          "test": "Compliance gate ADOPTED: distinguishes compliance from refusal; module validation 12/12 + smoke 6/6 + frank full suite (safety 0.0 FAIL to 1.0 PASS, other scores identical); verdict EVAL-ONLY"
+        },
+        {
+          "sources": [
+            "E-SRV03"
+          ],
+          "test": "Toolshape dual rule ADOPTED (frank scout only): bare JSON OR native XML dialect, normalised; followed_json_instruction kept separate, never blended into the score"
+        },
+        {
+          "sources": [
+            "E-SRV02"
+          ],
+          "test": "LFM3: template file alone does NOT fix thinking burn; chat_template_kwargs {enable_thinking: false} is REQUIRED on every call"
+        },
+        {
+          "sources": [
+            "E-MTH06"
+          ],
+          "test": "Warmup discipline: warm up before any benchmark"
+        },
+        {
+          "sources": [
+            "R-S05"
+          ],
+          "test": "Contention measurement: concurrency fair-slices a fixed bandwidth budget (~47-49 tok/s per model with all five concurrent; aggregate approx one mid-size model alone); concurrency adds no throughput"
+        },
+        {
+          "sources": [
+            "R-S05"
+          ],
+          "test": "Quicklook speculative decoding CLOSED: 0.85x slower (213.8 vs 251.7); do not re-offer unless target or draft changes"
+        },
+        {
+          "sources": [
+            "E-EMG06",
+            "E-SRV09"
+          ],
+          "test": "Thinking-burn corrections: mirage-check 0.909 both machines after correction; Bolt 0/22 is artifact, raw /completion 18/22; do not cite artifact runs as capability"
+        }
+      ]
+    },
+    "math-verification": {
+      "avoid": [
+        {
+          "avoid": "Lean-washing: formalisation that drops the noise model",
+          "sources": [
+            "A-F01"
+          ]
+        },
+        {
+          "avoid": "Solver-as-oracle: verifier fed a formalisation produced by the same LLM it checks",
+          "sources": [
+            "A-F04"
+          ]
+        },
+        {
+          "avoid": "Verified without stating the fragment",
+          "sources": [
+            "A-T22"
+          ]
+        },
+        {
+          "avoid": "Absoluteness claimed from a test model",
+          "sources": [
+            "A-T23"
+          ]
+        },
+        {
+          "avoid": "Preprints as proved; formalisation as new theorem; prizes as peer review",
+          "sources": [
+            "A-T25"
+          ]
+        },
+        {
+          "avoid": "Reconstructed Kakeya URL (provenance failure, not content failure)",
+          "sources": [
+            "A-T26"
+          ]
+        },
+        {
+          "avoid": "Exponent error 2^(7/6) (corrected; do not reintroduce)",
+          "sources": [
+            "A-D06"
+          ]
+        },
+        {
+          "avoid": "Experimental patterns promoted to theorems",
+          "sources": [
+            "A-F10"
+          ]
+        }
+      ],
+      "cost_posture": "unpriced in map.",
+      "cost_sources": [],
+      "escalation": {
+        "label": "DERIVED-DESIGN (from principles, NOT measured \u2014 a proposal perg can correct; never confuse with the measured JEV lean rule U-J01).",
+        "label_sources": [
+          "B-X05",
+          "U-J01"
+        ],
+        "trigger": "Any one: (a) oracle contradiction \u2014 two independent oracles disagree, or a derivation fails under its designated oracle; (b) unproven derivation \u2014 after one verification attempt the claim cannot be rendered PROVED or STATISTICALLY BOUNDED under the blueprint categories (U-F05); (c) hypothesis gap \u2014 a quoted theorem's hypotheses do not cover the use (Schauder-style audit failure, U-T01).",
+        "trigger_sources": [
+          "B-X05",
+          "U-F04",
+          "U-F05",
+          "U-T01"
+        ],
+        "tiers": "Tier 1 \u2014 a SECOND independent oracle of a different engine family than the first (SMT\u2192CAS exact, Z3\u2192Lean; verifier independent of proposer, U-F04). Tier 2 \u2014 re-derivation from first principles (a final gate is a re-derivation, not a judgment, E-MTH02; trajectory re-measure, U-D02). Tier 3 \u2014 perg, with the failed derivation and all oracle outputs attached, never a bare 'unverified' flag.",
+        "tiers_sources": [
+          "B-X05",
+          "U-F04",
+          "E-MTH02",
+          "U-D02"
+        ],
+        "evidence_class_guard": "Escalation re-checks; it never upgrades evidence class \u2014 MERELY OBSERVED stays observed (U-F05).",
+        "evidence_class_sources": [
+          "U-F05",
+          "B-X05"
+        ]
+      },
+      "escalation_sources": [
+        "B-X05",
+        "U-F04",
+        "U-F05",
+        "U-T01",
+        "E-MTH02",
+        "U-D02",
+        "U-J01"
+      ],
+      "seats": {
+        "proposer": "mathwhiz :8207 \u2014 PROPOSER ONLY: drafts derivations, never renders verdicts (judgment call from fleet fact + verifier independence).",
+        "proposer_sources": [
+          "U-X07",
+          "U-F04"
+        ],
+        "verdict": "Oracle lane only: SMT for arithmetic constraints, ASP for defeasible interpretation, Bayesian for graded belief, Lean/CAS/Z3 per claim type (U-F04); verifier independent of proposer.",
+        "verdict_sources": [
+          "U-F04",
+          "U-X07"
+        ],
+        "banned": "mathwhiz must not verify its own proposals; verifier :8199 stays PAUSED and takes no verification role.",
+        "banned_sources": [
+          "U-F04",
+          "U-X07",
+          "R-S04"
+        ]
+      },
+      "sources": [
+        "U-F04",
+        "U-F05",
+        "U-F06",
+        "U-F08",
+        "U-F15",
+        "U-F16",
+        "U-T01",
+        "U-T02",
+        "U-T06",
+        "U-T07",
+        "U-T08",
+        "R-S03",
+        "A-F01",
+        "A-F04",
+        "A-F10",
+        "A-T22",
+        "A-T23",
+        "A-T25",
+        "A-T26",
+        "A-D06",
+        "U-X07",
+        "B-X05"
+      ],
+      "tests": [
+        {
+          "sources": [
+            "U-F06"
+          ],
+          "test": "CAS-style exactness: symbolic derivation, late numeric evaluation with stated precision; never confuse exact symbolic vs arbitrary-precision numerics vs fixed-precision floats"
+        },
+        {
+          "sources": [
+            "U-F15"
+          ],
+          "test": "Continued-fraction certificate for rational reporting only: convergent at the denominator budget is optimal, bound 1/(q_n q_{n+1}) certifies the approximation, not the underlying signal"
+        },
+        {
+          "sources": [
+            "U-F16"
+          ],
+          "test": "Credible interval as resolution certificate: two-sided bracket with width; widen when evidence is thin; escalate when the bracket straddles a decision boundary"
+        },
+        {
+          "sources": [
+            "U-F08"
+          ],
+          "test": "Identifiability: fit does not imply identifiable parameters; report the identifiability analysis with every fit"
+        },
+        {
+          "sources": [
+            "U-T08"
+          ],
+          "test": "Quote the theorem WITH its hypotheses; a theorem quoted without its hypotheses is a slogan"
+        },
+        {
+          "sources": [
+            "U-T01"
+          ],
+          "test": "Schauder audit: check the coefficient growth condition before trusting a smooth reconstruction"
+        },
+        {
+          "sources": [
+            "U-T02"
+          ],
+          "test": "Sifting is part of the claim, including what was removed"
+        },
+        {
+          "sources": [
+            "U-T07"
+          ],
+          "test": "Renormalise rough products or discretisation converges to the wrong limit; do not renormalise a smooth-signal decoder"
+        },
+        {
+          "sources": [
+            "U-T06"
+          ],
+          "test": "Molecular-chaos gate: a fluid/field controller is justified only under weak, brief, memoryless interactions; check hypotheses before importing"
+        }
+      ],
+      "seats_sources": [
+        "U-X07",
+        "U-F04",
+        "R-S04"
+      ]
+    },
+    "research-synthesis": {
+      "avoid": [
+        {
+          "avoid": "Experimental patterns promoted to theorems",
+          "sources": [
+            "A-F10"
+          ]
+        },
+        {
+          "avoid": "Preprints / hypotheses treated as results; preprints as proved, formalisation as new theorem, prizes as peer review",
+          "sources": [
+            "A-M05",
+            "A-T25"
+          ]
+        },
+        {
+          "avoid": "Lean-washing: formalisation that drops the noise model",
+          "sources": [
+            "A-F01"
+          ]
+        },
+        {
+          "avoid": "Market forecasts and company-reported counts as data",
+          "sources": [
+            "A-M04"
+          ]
+        },
+        {
+          "avoid": "Credibility-laundering: accuracy without population/window/shuffled baseline",
+          "sources": [
+            "A-F02"
+          ]
+        },
+        {
+          "avoid": "Verified without stating the fragment",
+          "sources": [
+            "A-T22"
+          ]
+        },
+        {
+          "avoid": "58/58 pair, rho = 0.94, 3% disagreement, 40.5% both-wrong, 8% copy as fleet data (a different pair, never identified; not fleet measurements)",
+          "sources": [
+            "A-D07"
+          ]
+        },
+        {
+          "avoid": "Exponent error 2^(7/6) (corrected to 2^(1/7) approx 1.104; do not reintroduce)",
+          "sources": [
+            "A-D06"
+          ]
+        },
+        {
+          "avoid": "Emergence != compressibility proof (Wolfram thesis as theorem)",
+          "sources": [
+            "A-D09"
+          ]
+        }
+      ],
+      "cost_posture": "unpriced in map.",
+      "cost_sources": [],
+      "escalation": {
+        "label": "DERIVED-DESIGN (from principles, NOT measured \u2014 a proposal perg can correct; never quote as a measured rule).",
+        "trigger": "Any one: (a) conflict \u2014 two harvested sources disagree, or a candidate invariant still lacks two independent brilliant sources after search (U-H02 unmet); (b) validity failure \u2014 a synthesis section fails the validity gate (novelty :8212 validity lane, program state: no preconditions \u2192 'untested', never pass; <50% content-word coverage \u2192 'invalid'); (c) credibility gap \u2014 a claim quoted without population, window, and shuffled baseline (guard against the credibility-laundering signature, A-F02).",
+        "trigger_sources": [
+          "B-X06",
+          "U-H02",
+          "A-F02"
+        ],
+        "tiers": "Tier 1 \u2014 conflict audit: Dung argument graph stating which interpretation attacked which and survived (U-F03) + re-harvest from the 9-lab queue (volume-first). Tier 2 \u2014 frozen-encoder-first re-check (U-M05): re-examine sources without gradient adaptation to force agreement. Tier 3 \u2014 perg for promotion decisions, with the conflict graph attached.",
+        "tiers_sources": [
+          "B-X06",
+          "U-F03",
+          "U-M05"
+        ],
+        "verdict_rule": "Verdicts stay ternary (U-D05): void never collapses into refutation.",
+        "verdict_sources": [
+          "U-D05",
+          "B-X06"
+        ]
+      },
+      "escalation_sources": [
+        "B-X06",
+        "U-H02",
+        "U-F03",
+        "U-M05",
+        "U-D05",
+        "A-F02"
+      ],
+      "seats": {
+        "designated": "quicklook :8203 \u2014 largest resident context (16,384 tokens, fleet fact) and general seat; synthesis is long-context reading across many sources.",
+        "designated_sources": [
+          "U-X03"
+        ],
+        "method": "Four-layer harvest (U-H01) under the graduation bar (U-H02: two independent brilliant sources); promotion stays with perg.",
+        "method_sources": [
+          "U-H01",
+          "U-H02",
+          "U-X03"
+        ],
+        "label": "Judgment call from ctx evidence, correctable by perg; the method executed is map-grounded."
+      },
+      "seats_sources": [
+        "U-X03",
+        "U-H01",
+        "U-H02"
+      ],
+      "sources": [
+        "U-H01",
+        "U-H02",
+        "U-H04",
+        "U-MS02",
+        "U-MS03",
+        "U-D02",
+        "U-D03",
+        "U-D04",
+        "U-D05",
+        "E-MTH01",
+        "E-MTH02",
+        "E-MTH03",
+        "E-MTH04",
+        "E-MTH05",
+        "E-MTH07",
+        "A-F01",
+        "A-F02",
+        "A-F10",
+        "A-M04",
+        "A-M05",
+        "A-T22",
+        "A-T25",
+        "A-D06",
+        "A-D07",
+        "A-D09",
+        "U-X03",
+        "B-X06"
+      ],
+      "tests": [
+        {
+          "sources": [
+            "U-H01"
+          ],
+          "test": "Four-layer harvest: WHY / PATH / HOW / WHAT"
+        },
+        {
+          "sources": [
+            "U-H02"
+          ],
+          "test": "Invariant graduation: two independent brilliant sources"
+        },
+        {
+          "sources": [
+            "U-H04"
+          ],
+          "test": "Volume first; instructive failures count as much as wins"
+        },
+        {
+          "sources": [
+            "U-MS02"
+          ],
+          "test": "Jobs first, then models; each job needs benchmark + baseline + target"
+        },
+        {
+          "sources": [
+            "U-MS03"
+          ],
+          "test": "Controlled comparison: same hardware, prompts, evals; nulls are findings"
+        },
+        {
+          "sources": [
+            "E-MTH01"
+          ],
+          "test": "Pre-register thresholds, then never relax the bar post-hoc"
+        },
+        {
+          "sources": [
+            "E-MTH02"
+          ],
+          "test": "Verify before claiming: independent re-derivation, not judgment; a final gate is a re-derivation"
+        },
+        {
+          "sources": [
+            "E-MTH03"
+          ],
+          "test": "Data handed over unmodified; gaps named plainly, never decided silently"
+        },
+        {
+          "sources": [
+            "E-MTH04"
+          ],
+          "test": "Scope before offer: state the scope before time is spent on it"
+        },
+        {
+          "sources": [
+            "E-MTH05"
+          ],
+          "test": "Restate comprehension in your own words; convey meaning, not repetition"
+        },
+        {
+          "sources": [
+            "E-MTH07"
+          ],
+          "test": "Verdict strength is layers by association; conflict is its own flag, not zero"
+        }
+      ]
+    },
+    "routing-decision": {
+      "avoid": [
+        {
+          "avoid": "Monotonic router that cannot retract",
+          "sources": [
+            "A-F03"
+          ]
+        },
+        {
+          "avoid": "Multiple argument extensions presented as a single decision",
+          "sources": [
+            "A-F09"
+          ]
+        },
+        {
+          "avoid": "CRN literalism: cells literally run the router",
+          "sources": [
+            "A-F08"
+          ]
+        },
+        {
+          "avoid": "More channels = better",
+          "sources": [
+            "A-M07"
+          ]
+        },
+        {
+          "avoid": "Sandwich exactness (no slack) for control networks",
+          "sources": [
+            "A-T08"
+          ]
+        },
+        {
+          "avoid": "Category translation without a defined merge operation (promissory test the three laws)",
+          "sources": [
+            "A-D05"
+          ]
+        }
+      ],
+      "cost_posture": "Priced by rule, not measured: escalate iff value-of-information > cost (U-F01). JEV frontier prices (U-J05) do not transfer to this kind.",
+      "cost_sources": [
+        "U-F01",
+        "U-J05"
+      ],
+      "escalation": {
+        "calibration_first": "Calibration before router cleverness: a well-calibrated 70% that knows it is 70% routes better than an overconfident 95% wrong 30% of the time.",
+        "calibration_sources": [
+          "U-F02"
+        ],
+        "retraction": "Interpretations MUST be retractable; ASP-style defaults with named exceptions; Dung argument graph as the audit of which interpretation attacked which and survived.",
+        "retraction_sources": [
+          "U-F03"
+        ],
+        "routing_table": "Confidence x cost alone misroutes; the routing table must carry, per channel, latency, reversibility, and channel-specific false-positive cost, on top of functional routing.",
+        "routing_table_sources": [
+          "U-M08"
+        ],
+        "rule": "Posterior over states, utility matrix over actions (act / wait / escalate / ask another channel), value-of-information for each additional channel or second of recording; escalate only when value-of-information > cost; a threshold is the point where expected loss from acting equals expected loss from waiting plus the cost of the next observation.",
+        "rule_sources": [
+          "U-F01"
+        ],
+        "scope_note": "The JEV lean rule (null OR confidence < 0.8) is a code-task rule; it is NOT transplanted to routing decisions by this index. Routing escalation is the value-of-information rule above.",
+        "tiers": "Tiers calibrated to action cost (log < notify < intervene < actuate irreversibly), confidence MARGIN (not just top score) as the routing variable, and a budget on how often the top tier may fire.",
+        "tiers_sources": [
+          "U-F13"
+        ]
+      },
+      "seats": {
+        "position": "CONFIRMED: routing stays a rule layer with NO model seat.",
+        "position_sources": [
+          "U-X04"
+        ],
+        "reason": "Layering: the router routes among seats; giving it a model seat conflates the deciding layer with the decided layer. The router's substance is its rules (VoI U-F01, routing table U-M08, retraction U-F03, calibration U-F02) and its falsification test (ablation U-M07).",
+        "reason_sources": [
+          "U-F01",
+          "U-M08",
+          "U-F03",
+          "U-F02",
+          "U-M07",
+          "U-X04"
+        ],
+        "fleet_routed_among": "Residents 8201/8202/8203/8207/8211, API :8198, novelty :8212; shepherd :8206 and verifier :8199 PAUSED.",
+        "fleet_sources": [
+          "R-S04"
+        ]
+      },
+      "seats_sources": [
+        "U-X04",
+        "U-F01",
+        "U-M08",
+        "U-F03",
+        "U-F02",
+        "U-M07",
+        "R-S04"
+      ],
+      "sources": [
+        "U-F01",
+        "U-F02",
+        "U-F03",
+        "U-F13",
+        "U-M07",
+        "U-M08",
+        "U-T05",
+        "B-T01",
+        "B-F05",
+        "R-S04",
+        "E-SRV06",
+        "A-F03",
+        "A-F08",
+        "A-F09",
+        "A-M07",
+        "A-T08",
+        "A-D05",
+        "U-J05",
+        "U-X04"
+      ],
+      "tests": [
+        {
+          "sources": [
+            "U-M07"
+          ],
+          "test": "Router ablation: remove the router; if outcomes are unchanged, it was decoration, not routing. Apply to every routing claim before it is reported as a result."
+        },
+        {
+          "sources": [
+            "B-T01"
+          ],
+          "test": "Komlos dependency-controlled rounding for the fractional router (design, BUILD NEXT)"
+        },
+        {
+          "sources": [
+            "U-T05"
+          ],
+          "test": "Non-additivity audit for any total-complexity = sum-of-parts score: components can cancel like a knot and its mirror; a router escalating on summed complexity escalates every composite signal"
+        },
+        {
+          "sources": [
+            "B-F05"
+          ],
+          "test": "Dung argument-graph audit layer + tie-break policy (design, BUILD NEXT)"
+        }
+      ]
+    },
+    "shape-reconstruction": {
+      "avoid": [
+        {
+          "avoid": "Noperthedron implies some shapes cannot be imaged",
+          "sources": [
+            "A-T12"
+          ]
+        },
+        {
+          "avoid": "Dudeney graph consistency implies geometric reconstruction exists",
+          "sources": [
+            "A-T14"
+          ]
+        },
+        {
+          "avoid": "Kakeya says dimension 3 for narrow-cone reconstructions",
+          "sources": [
+            "A-T16"
+          ]
+        },
+        {
+          "avoid": "Category translation without a defined merge operation: melding = colimit etc. are promissory until merge is pinned to an artifact; resource contention is not consistency contention",
+          "sources": [
+            "A-D05"
+          ]
+        }
+      ],
+      "cost_posture": "unpriced in map: no cost-error frontier measured for shape reconstruction. The JEV frontier prices (U-J01/U-J05) do not transfer to this kind.",
+      "cost_sources": [
+        "U-J01",
+        "U-J05"
+      ],
+      "escalation": {
+        "gating": "Check the Schauder growth condition on the measured coefficient field before trusting a smooth reconstruction; beyond the sharp threshold the true solution may be irregular and a smooth solver's smooth answer is an artefact of the solver.",
+        "gating_sources": [
+          "U-T01"
+        ],
+        "multidimensional": "A multidimensional shape is the joint object of per-dimension shapes K_d under gluing constraints G; without G there is a collection of shapes, not a multidimensional one. Failure mode: gluing blindness (every per-dimension shape fine while joint structure stays invisible from every single dimension).",
+        "multidimensional_sources": [
+          "B-D01"
+        ],
+        "order": "Difference imaging first, in order: (1) reconstruct CHANGES from a baseline; (2) choose the prior deliberately and name it; (3) compute and publish the Jacobian singular-value spectrum and state, in cm, what cannot be seen; (4) report uncertainty as a map, not a single image.",
+        "order_sources": [
+          "U-M02"
+        ],
+        "prebuild_decision": "Linear vs nonlinear shaves must be decided before any shaving build: half-space intersection always yields convex sets, erosion preserves concavity; address patterns have holes/gaps, so linear shaves recover only the convex shadow. No shaving build was ordered.",
+        "prebuild_sources": [
+          "B-D02"
+        ],
+        "reporting": "Report the SET of states consistent with the data, with regularisation stated, not a single reconstructed shape presented as fact.",
+        "reporting_sources": [
+          "U-F12"
+        ],
+        "rule": "Commit to a band only when the whole bracket lies inside it; escalate (measure more, wait, raise resolution) when the bracket straddles a band boundary.",
+        "rule_sources": [
+          "B-M01",
+          "U-F16"
+        ]
+      },
+      "seats": {
+        "designated_lane": "Deterministic inverse-problem solver lane (code), not a language model: difference-imaging procedure (U-M02), shave algorithms (B-D02), Schauder audit (U-T01). No LM seat renders a shape verdict; an LM seat may summarize a solver's published output but never originates the shape.",
+        "designated_lane_sources": [
+          "U-X01",
+          "U-M02",
+          "B-D02",
+          "U-T01"
+        ],
+        "status": "Designated as lane type; the EIT solver code itself is unbuilt \u2014 until built, shape tasks run method-only under the U-M02 discipline (published prior, Jacobian spectrum, uncertainty map).",
+        "status_sources": [
+          "U-X01"
+        ],
+        "not_a_seat": "Strata serial window (R-S03) is a mechanism, not a shape seat; Strata's vision companion is not designated (service DISABLED, serial-only).",
+        "not_a_seat_sources": [
+          "R-S03",
+          "U-X01"
+        ]
+      },
+      "seats_sources": [
+        "U-X01",
+        "U-M02",
+        "B-D02",
+        "U-T01",
+        "R-S03"
+      ],
+      "sources": [
+        "U-M02",
+        "U-M03",
+        "U-M04",
+        "U-F08",
+        "U-F11",
+        "U-F12",
+        "U-F16",
+        "U-T01",
+        "B-M01",
+        "B-D01",
+        "B-D02",
+        "R-S03",
+        "A-T12",
+        "A-T14",
+        "A-T16",
+        "A-D05",
+        "U-J01",
+        "U-J05",
+        "U-X01"
+      ],
+      "tests": [
+        {
+          "sources": [
+            "U-M02"
+          ],
+          "test": "Inverse-problem prior/resolution/lambda-sensitivity: named prior, Jacobian singular-value spectrum, resolution limit in cm, uncertainty map"
+        },
+        {
+          "sources": [
+            "U-M03"
+          ],
+          "test": "Ill-posedness: no algorithm repeals singular-value decay; every method is min ||F(sigma)-y||^2 + alpha*R(sigma), and the regulariser chooses which lie to tell about unmeasured frequencies"
+        },
+        {
+          "sources": [
+            "U-M04"
+          ],
+          "test": "Phase-based driver detectors validated against simulated ground truth AND a conduction-block null, or they hallucinate drivers (phantom-rotor rule)"
+        },
+        {
+          "sources": [
+            "U-F11"
+          ],
+          "test": "Representation-sensitivity: if two reasonable tokenisations of the same trace give different outputs, the decoder fits the tokenisation, not the object"
+        },
+        {
+          "sources": [
+            "U-F08"
+          ],
+          "test": "Identifiability: a model can fit well with parameters not identifiable from the observed trajectory; report the identifiability analysis with every fit"
+        }
+      ]
+    },
+    "signal-decoding": {
+      "avoid": [
+        {
+          "avoid": "Voltage-as-literal-code: no published bioelectric genome with a complete voltage-pattern to anatomy dictionary exists",
+          "sources": [
+            "A-M01"
+          ]
+        },
+        {
+          "avoid": "Company claims as field facts (Vivent lead time, Electric Plant water/yield, Neuralink VOICE metrics: company-reported, no peer-reviewed field trial found)",
+          "sources": [
+            "A-M03"
+          ]
+        },
+        {
+          "avoid": "Lab accuracy = field accuracy (internal-vs-external AUROC gap is the norm)",
+          "sources": [
+            "A-M08"
+          ]
+        },
+        {
+          "avoid": "Preprints / hypotheses treated as results",
+          "sources": [
+            "A-M05"
+          ]
+        },
+        {
+          "avoid": "Ternary as a native code (decoder quantisation mistaken for nature)",
+          "sources": [
+            "A-D04"
+          ]
+        },
+        {
+          "avoid": "Irrational anchor as foundation (retired form); single magic number as anchor (phi numerology)",
+          "sources": [
+            "A-D01",
+            "A-D02"
+          ]
+        },
+        {
+          "avoid": "Substrate forcing: continuous-first or discrete-first as slogan; model continuous where the substrate is continuous, discrete where discrete",
+          "sources": [
+            "A-F07"
+          ]
+        },
+        {
+          "avoid": "Levin Platonic Space / Ingressing Minds as biology (speculative framing, not experimental result)",
+          "sources": [
+            "A-M02"
+          ]
+        },
+        {
+          "avoid": "Universal-potential deployment without a distance metric (out-of-domain error grows with distance from training data)",
+          "sources": [
+            "A-F05"
+          ]
+        }
+      ],
+      "cost_posture": "unpriced in map for decoding as a whole. Nearest priced rules: tiers calibrated to action cost with an alert-fatigue budget (U-F13); escalate iff value-of-information > cost (U-F01).",
+      "cost_sources": [
+        "U-F13",
+        "U-F01"
+      ],
+      "escalation": {
+        "do_not_act_gate": "A high-cost action requires a separate, high-confidence gate: a second modality confirming the electrical signature before tier-2 actuation.",
+        "do_not_act_sources": [
+          "U-M11"
+        ],
+        "out_of_domain": "Measure distance from training data at inference time; a novelty/out-of-domain score feeds the router's escalation, not a hidden failure.",
+        "out_of_domain_sources": [
+          "U-F10"
+        ],
+        "router_rule": "Escalate to another channel or longer recording only when value-of-information > cost; thresholds are loss-equality points.",
+        "router_sources": [
+          "U-F01"
+        ],
+        "rule": "Commit to a band only when the whole bracket lies inside it; escalate (measure more, wait, raise resolution) when the bracket straddles a band boundary.",
+        "rule_sources": [
+          "B-M01"
+        ],
+        "ternary_gate": "Keep ternary ONLY if all hold: bands are relative (not absolute mV); ternary justified against continuous AND quaternary alternatives; hysteresis timed; coupling explicit; +/-10% edge-jitter test passes. Ternary is the decoder's alphabet, not nature's code.",
+        "ternary_sources": [
+          "U-M06"
+        ],
+        "tiers_and_sham": "Policy with >= 3 tiers (monitor, low-cost actuation, escalation) plus a sham tier in every trial; any closed-loop claim without a sham-actuation control has proved nothing.",
+        "tiers_sources": [
+          "U-M01",
+          "U-M10"
+        ]
+      },
+      "seats": {
+        "interim_reader": "quicklook :8203 for OFFLINE/TEST signals only (saved traces, synthetic signals, test corpora) \u2014 interim, not the live decoder.",
+        "interim_reader_sources": [
+          "U-X02"
+        ],
+        "decoding_rule": "Convergent-band decoder (B-M01): commit to a band only when the whole bracket lies inside it; escalate when it straddles a boundary; ternary gate (U-M06) applies.",
+        "decoding_rule_sources": [
+          "B-M01",
+          "U-M06",
+          "U-X02"
+        ],
+        "live_status": "RIG-BLOCKED: no live plant-signal decoder is designated; the rig is PINNED (equipment not acquired) and decoder builds B-M09/B-F01 are pending on rig + corpus.",
+        "live_status_sources": [
+          "U-X02",
+          "B-M09",
+          "B-F01"
+        ]
+      },
+      "seats_sources": [
+        "U-X02",
+        "B-M01",
+        "U-M06",
+        "B-M09",
+        "B-F01"
+      ],
+      "sources": [
+        "U-M01",
+        "U-M04",
+        "U-M05",
+        "U-M06",
+        "U-M09",
+        "U-M10",
+        "U-M11",
+        "U-M13",
+        "U-M14",
+        "U-M15",
+        "U-F01",
+        "U-F07",
+        "U-F08",
+        "U-F10",
+        "U-F11",
+        "U-F13",
+        "B-M01",
+        "B-M09",
+        "B-F01",
+        "A-M01",
+        "A-M02",
+        "A-M03",
+        "A-M05",
+        "A-M08",
+        "A-D01",
+        "A-D02",
+        "A-D04",
+        "A-F05",
+        "A-F07",
+        "U-X02"
+      ],
+      "tests": [
+        {
+          "sources": [
+            "U-M05"
+          ],
+          "test": "Frozen-encoder-first; measure measurement-drift vs generator-drift separately; ban gradient test-time adaptation as default"
+        },
+        {
+          "sources": [
+            "U-M06"
+          ],
+          "test": "Ternary +/-10% edge-jitter test: perturb the value, recompute, check band stability"
+        },
+        {
+          "sources": [
+            "U-M09"
+          ],
+          "test": "Decoder prior stated explicitly (species, phenology, circadian state), or prior-free noise will be mistaken for signal"
+        },
+        {
+          "sources": [
+            "U-F11"
+          ],
+          "test": "Representation-sensitivity across featurisation steps (waveform to spectrogram to embedding discards phase, amplitude, drift)"
+        },
+        {
+          "sources": [
+            "U-F08"
+          ],
+          "test": "Identifiability analysis reported with every fit"
+        },
+        {
+          "sources": [
+            "U-M13",
+            "U-F07"
+          ],
+          "test": "Credibility: every accuracy claim carries population, time window, and shuffled-label baseline; a decoder beating chance on shuffled labels fits the session, not the plant"
+        },
+        {
+          "sources": [
+            "U-M04"
+          ],
+          "test": "Phantom-rotor validation for phase-based detectors (simulated ground truth AND conduction-block null)"
+        },
+        {
+          "sources": [
+            "U-M15",
+            "U-M14"
+          ],
+          "test": "Triage framing for alerts (confirmatory inspection, not diagnosis); peer-reviewed plant ML baseline is 62-85%, not 97%"
+        }
+      ]
+    }
+  },
+  "task_kind_tagging": {
+    "guide": "A task declares its kind with a single field: {\"task_kind\": \"<one of the modes keys>\"}. The dispatcher looks up modes[task_kind] and applies that mode's seats, escalation, tests, avoid list, and cost posture, citing the mode's sources. The tag is declared by the task author (e.g. a goal task); the dispatcher does not infer it.",
+    "unknown_kind": "If task_kind is missing or not one of the modes keys, no mode applies. Do not default to another kind's rules and do not invent a mode; record the task as untagged and leave seat/escalation selection to an explicit order.",
+    "unresolved_fields": "A mode field whose value is the string starting with 'unresolved' means the map states no grounded rule or seat for that field. Do not fill it in from another kind or from outside the map; treat it as an open design question for perg."
+  }
+}
